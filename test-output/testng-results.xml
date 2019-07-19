@@ -2,46 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2601924" started-at="2019-07-18T12:35:05Z" finished-at="2019-07-18T13:18:27Z">
+  <suite name="Default suite" duration-ms="65784" started-at="2019-07-19T12:59:12Z" finished-at="2019-07-19T13:00:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2601924" started-at="2019-07-18T12:35:05Z" finished-at="2019-07-18T13:18:27Z">
+    <test name="Default test" duration-ms="65784" started-at="2019-07-19T12:59:12Z" finished-at="2019-07-19T13:00:18Z">
       <class name="FirstPackage.AddEmployee">
-        <test-method status="PASS" signature="openbrowser()[pri:0, instance:FirstPackage.AddEmployee@7c16905e]" name="openbrowser" duration-ms="11204" started-at="2019-07-18T18:05:05Z" finished-at="2019-07-18T18:05:16Z">
+        <test-method status="PASS" signature="openbrowser()[pri:0, instance:FirstPackage.AddEmployee@7c16905e]" name="openbrowser" duration-ms="13170" started-at="2019-07-19T18:29:13Z" finished-at="2019-07-19T18:29:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openbrowser -->
-        <test-method status="FAIL" signature="credentials()[pri:1, instance:FirstPackage.AddEmployee@7c16905e]" name="credentials" duration-ms="2590685" started-at="2019-07-18T18:05:16Z" finished-at="2019-07-18T18:48:27Z">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (1137, 651)
-  (Session info: chrome=75.0.3770.142)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-LDS4O3B', ip: '192.168.42.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\STS-111\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:51171}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 64ddf76b8b4804dbb423fe97c424d555]]>
-            </message>
+        <test-method status="FAIL" signature="credentials()[pri:1, instance:FirstPackage.AddEmployee@7c16905e]" name="credentials" duration-ms="52584" started-at="2019-07-19T18:29:26Z" finished-at="2019-07-19T18:30:18Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1137, 651)
-  (Session info: chrome=75.0.3770.142)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-LDS4O3B', ip: '192.168.42.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\STS-111\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:51171}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 64ddf76b8b4804dbb423fe97c424d555
-	at sun.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at FirstPackage.AddEmployee.credentials(AddEmployee.java:153)
+              <![CDATA[java.lang.NullPointerException
+	at FirstPackage.AddEmployee.credentials(AddEmployee.java:57)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -69,7 +43,7 @@ Session ID: 64ddf76b8b4804dbb423fe97c424d555
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- credentials -->

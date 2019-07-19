@@ -48,7 +48,7 @@ public class AddEmployee {
 		
 		FileInputStream fis = new FileInputStream("C:\\Users\\STS-111\\Desktop\\DBF37420.xlsx");
 		excel = new XSSFWorkbook(fis);
-		sheet = excel.getSheetAt(0);
+		sheet = excel.getSheetAt(1);
 		
 		for(int i=1; i<=sheet.getLastRowNum();i++){
 		
@@ -68,7 +68,28 @@ public class AddEmployee {
 		drp1.selectByValue(cell.getStringCellValue());
 		
 		cell = sheet.getRow(i).getCell(5);
-		Select drp2 = new Select (driver.findElement(By.id("CompensationType")));
+		if(cell.getStringCellValue().equalsIgnoreCase("PAIDBYHOUR")){
+			Select drp51 = new Select (driver.findElement(By.id("CompensationType")));
+			drp51.selectByValue("PAIDBYHOUR");
+			
+			cell = sheet.getRow(i).getCell(7);
+			driver.findElement(By.id("WagesAmount")).sendKeys(cell.getStringCellValue());
+		}
+		else if(cell.getStringCellValue().equalsIgnoreCase("SALARYNOOVERTIME")){
+			
+			Select drp52 = new Select (driver.findElement(By.id("CompensationType")));
+			drp52.selectByValue("SALARYNOOVERTIME");
+			cell = sheet.getRow(i).getCell(6);
+			driver.findElement(By.id("WagesAmount")).sendKeys(cell.getStringCellValue());
+		}
+	else if(cell.getStringCellValue().equalsIgnoreCase("OTELIGIBLE")){
+		Select drp53 = new Select (driver.findElement(By.id("CompensationType")));
+		drp53.selectByValue("SALARYELIGIBLEFOROVERTIME");
+		cell = sheet.getRow(i).getCell(6);
+		driver.findElement(By.id("WagesAmount")).sendKeys(cell.getStringCellValue());
+		
+	}}}}
+		/*Select drp2 = new Select (driver.findElement(By.id("CompensationType")));
 		drp2.selectByValue(cell.getStringCellValue());
 		cell = sheet.getRow(i).getCell(6);
 		driver.findElement(By.id("WagesAmount")).sendKeys(cell.getStringCellValue());
@@ -170,3 +191,4 @@ public class AddEmployee {
 
 	}
 }
+*/
